@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+$maincolor: #98a2a848; 
+$mainpadding : 20px;
+$seconadrycolor: #c59d5f;
+
+body{
+    background-color: $maincolor;
+}
+.questions{
+    width: 80%;
+    max-width: 900px;
+    margin: 150px auto;
+    display: grid;
+    grid-gap: 30px;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 50px 5px 3px rgba(255,255,255,0.2);
+    // text-align: center;
+    .title {
+        text-align: center;
+        h2{
+            color: $seconadrycolor;
+        }
+    }
+    .section-center{
+        width: 700px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: $mainpadding;
+        position: relative;
+        .quetion{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+            margin-bottom: 20px;
+            .btn {
+                padding: 2px;
+                // height: 40px;
+                border: 2px solid $seconadrycolor;
+                background-color: transparent;
+                cursor: pointer;
+                // transition: 0.3s ease;
+                // &:hover {
+                //     transform: rotate(90deg);
+                // }
+                &:hover i{
+                    transform: rotate(90deg);
+                }
+                i {
+                    background-color: transparent;
+                    font-size: 18px;
+                    color: #c59d5f;
+                    transition: 0.4s ease;
+                }
+            }
+            // ::after{
+            //     content: "";
+            //     position: absolute;
+            //     bottom: 50%;
+            //     left: 5%;
+            //     width: 95% ;
+            //     transform: translateX(-5%);
+            //     height: 1px;
+            //     background-color: #617d98;
+            // }
+            p{
+                letter-spacing: 4px;
+                font-size: 24px;
+            }
+        }
+    }
+        .hidden-quetion{
+            width: 100%;
+            display: none;
+            p{
+                line-height: 1.5;
+                font-size: 23px;
+                font-weight: 500;
+                color: #617d98;
+            }
+        }
+}
+.hidden-quetion.showhidden{
+    display: block;
+}
+
