@@ -1,0 +1,17 @@
+$maincolor : #f2f;
+$secondary : #35b65c;
+$base-padding: 100px;
+$base-raduis: 20px;
+
+
+@import "guest";
+
+
+body{
+    background-color: $main;
+    padding-left: $base-padding;
+}
+.mouad {
+    background-color: $secondary;
+    border-radius: $base-raduis;
+}

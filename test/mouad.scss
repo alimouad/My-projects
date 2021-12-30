@@ -1,0 +1,41 @@
+$maincolor :rgb(92, 34, 200);
+$mainsize : 30px;
+$secondcolor : #ccc;
+
+@use 'sass:math';
+
+@import "madiha";
+
+%mouad{
+    color :$maincolor;
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+    width: 200px;
+    background-color: $secondcolor;
+}
+@mixin  boRad($r) {
+    border-radius: $r;
+}
+
+.ali {
+    background-color: $maincolor;
+    .allo1{
+        @include boRad(50px);
+        color: #f3f3;
+        font-size: $mainsize / 3;
+        background-color: aqua;
+    }
+    .allo2 {
+        @extend %mouad;
+        color: $maincolor;
+    }
+    
+}
+
+@for $i from 1 through 9 {
+   .allo#{$i} {
+       font-weight: bold ;
+   }
+}
+@debug "hello mouad";
