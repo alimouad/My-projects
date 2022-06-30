@@ -1,0 +1,104 @@
+/*============= achievement =============*/
+
+.achievement{
+    margin-top: 3rem;
+}
+.achievement-right > p{
+    margin: 1rem 0 2rem;
+    line-height: 2;
+}
+.achievement__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.achievements__card{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3,  1fr);
+}
+.achievement__card{
+    background-color: var(--color-bg1);
+    padding: 1.3rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+.achievement__card:hover{
+    background-color: var(--color-bg2);
+    box-shadow:  0 3rem 3rem rgba(0,0,0,0.3);
+}
+.achievement__icon{
+    display: inline-block;
+    border-radius: 1.3rem;
+    font-size: 2rem;
+    padding:0.1rem 0.56rem;
+    margin: 0.96rem 0 1.5rem;
+    background-color: var(--color-danger);
+}
+
+
+
+/*=================== team ================*/
+
+.team {
+    background-color: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0,0,0,0.3);
+}
+.team__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px , 1fr));
+    gap: 1rem;
+}
+.team__members{
+    background-color: var(--color-bg2);
+    padding: 1.5rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow-x: hidden;
+}
+.team__members:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+.team__members img{
+    filter: saturate(0);
+}
+.team__members:hover img{
+    filter: saturate(1);
+}
+.team__member-info *{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+.team__socials{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    right: -100%;
+    transform: translateY(-50%);
+    transition: var(--transition);
+    background-color: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+}
+.team__socials a{
+    padding: 0.80rem;
+}
+.team__members:hover .team__socials{
+    right: 0;
+    opacity: 1;
+}
+
+
+@media (max-width:724px){
+    .achievements__card{
+        grid-template-columns: repeat(2,  1fr);
+    }
+    .achievement__container{
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+    }
+}
